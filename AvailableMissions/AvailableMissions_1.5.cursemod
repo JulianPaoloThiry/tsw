@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CurseMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.curse.com/cursemod/2.0">
+  <GameId>64</GameId>
+  <PackageId>face7a3e-a931-4461-ba7d-8db3b4632933</PackageId>
+  <ManifestFingerprint>0</ManifestFingerprint>
+  <Files />
+</CurseMod>

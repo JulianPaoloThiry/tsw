@@ -1,0 +1,15 @@
+Steps to create this MissionJournalWindow from the original:
+
+* Copy the original MissionJournalWindow.fla and open it.
+* Copy ViewButton from Sources/Components/Buttons.fla into the new file.
+* Copy _Icon_Modifier_Lock from Sources/Components/Mission_Components.fla into
+  the new file.
+* Copy _Icon_Mission_Raid from Sources/Components/Mission_Components.fla into
+  the new file. Drag it into the MissionIcons folder and replace the existing
+  one (it has the wrong icon).
+* Open the properties for _Icon_Mission_Raid, click Export for ActionScript,
+  and set the class to "gfx.controls.Button".
+* Open the properties for JournalWindow and set the class to "JournalWindow".
+* Modify the Font Embedding settings for RusselSquareStd to include only
+  Numerals and "(:-. )".
+* Change the Publish Settings Output file to something reasonable and publish.
