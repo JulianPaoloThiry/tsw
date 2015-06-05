@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Root>
+  <Module  name = "GHOSTTablet"
+    movie       = "GHOSTTablet/GHOSTTablet.swf"
+    flags       = "GMF_DONT_UNLOAD"
+    depth_layer = "Top"
+    sub_depth   = "0"
+    variable    = ""
+    criteria    = "guimode &amp; (GUIMODEFLAGS_INPLAY | GUIMODEFLAGS_ENABLEALLGUI)"
+  />
+</Root>

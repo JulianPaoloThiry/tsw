@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Root>
+  <Module  name = "MissionInfo"
+    flags       = "GMF_PRELOAD"
+    movie       = "MissionInfo/MissionInfo.swf"
+    depth_layer = "Middle"
+    sub_depth   = "0"
+    variable    = ""
+    criteria    = "guimode &amp; (GUIMODEFLAGS_INPLAY | GUIMODEFLAGS_ENABLEALLGUI)"
+  />
+</Root>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Root>
+  <Value name="CleanNotifications" value="true" />
+  <Value name="BlinkNotifications" value="true" />
+  <Value name="SuppressAPWhenCapped" value="false" />
+  <Value name="SuppressSPWhenCapped" value="false" />
+</Root>

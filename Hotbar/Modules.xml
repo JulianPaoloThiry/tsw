@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Root>
+  <Module  name = "Hotbar"
+    movie       = "Hotbar/Hotbar.swf"
+    flags       = "GMF_DONT_UNLOAD"
+    depth_layer = "Top"
+    sub_depth   = "0"
+    variable    = "Hotbar"
+    criteria    = "Hotbar &amp;&amp; (guimode &amp; (GUIMODEFLAGS_INPLAY | GUIMODEFLAGS_ENABLEALLGUI))"
+  />
+</Root>
