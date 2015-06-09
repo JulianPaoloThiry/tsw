@@ -28,8 +28,8 @@ class HotbarShortcut
 		RegisterHotkey(_global.Enums.InputCommand.e_InputCommand_SelectTeammember4, "HotbarShortcut.Shortcutbar4");
 		RegisterHotkey(_global.Enums.InputCommand.e_InputCommand_SelectTeammember5, "HotbarShortcut.Shortcutbar5");
 		RegisterHotkey(_global.Enums.InputCommand.e_InputCommand_SelectTeammember6, "HotbarShortcut.Shortcutbar6");
-		RegisterHotkey(_global.Enums.InputCommand.e_InputCommand_SaveVideo, "HotbarShortcut.ItemDown1");
-		RegisterHotkey(_global.Enums.InputCommand.e_InputCommand_SaveVideo_Mov, "HotbarShortcut.ItemDown2");
+		RegisterHotkey(_global.Enums.InputCommand.e_InputCommand_CampGameToSystem_AltF4, "HotbarShortcut.ItemDown1");
+		RegisterHotkey(_global.Enums.InputCommand.e_InputCommand_CampGameToLogin, "HotbarShortcut.ItemDown2");
 	}
 	
 	private static function RegisterHotkey(hotkey:Number, func:String) {

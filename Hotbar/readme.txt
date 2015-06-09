@@ -1,10 +1,11 @@
 Addon Name:      Hotbar
 Author:          Aedani
-Version:         1.0.4
-Official Sites:  http://www.secretui.com/downloads/fileinfo.php?id=78
+Version:         1.0.5
+Official Site:   http://games.jupath.me/tsw/hotbat
+Distributors:    http://www.secretui.com/downloads/fileinfo.php?id=78
                  http://www.curse.com/tsw-mods/tsw/hotbar
 Official Forum:  http://forums.thesecretworld.com/showthread.php?t=61753
-Source Code:     git://git.curseforge.net/tsw/hotbar/mainline.git
+Source Code:     https://github.com/JulianPaoloThiry/tsw/tree/master/Hotbar
 
 
 DESCRIPTION
@@ -33,8 +34,8 @@ CONFIGURING THE HOTBAR
 1. Open the controls menu, locate the following items, and change them to the
    values listed below.
 
-      Save Video (Mov)                    ALT
-      Save Video (Quicktime)              SHIFT
+      Exit game                           SHIFT
+      Camp to login                       ALT
       Offensive Target Self               F1
       Target Group Member 2               F2
       Target Group Member 3               F3
@@ -42,14 +43,11 @@ CONFIGURING THE HOTBAR
       Target Group Member 5               F5
       Target Group Member 6               F6
 
-2. Find "Exit Game" and set it to anything that isn't a combination of the
-   above values (something like CTRL+SHIFT+F12 will work).
-
-3. Find the inventory bag with the name "Hotbar" and drag some items into it.
+2. Find the inventory bag with the name "Hotbar" and drag some items into it.
    Any item that can be activated will work - potions, quest items, Deathless
    skills, gear, etc., are all acceptable.
 
-4. Activate items on the hotbar by pressing the keys listed in the corresponding
+3. Activate items on the hotbar by pressing the keys listed in the corresponding
    square on hotbarkeys.png.
 
    
@@ -66,8 +64,7 @@ Solution: Assign F1-F6 (or the keys of your choice) to the secondary column.
 
 Problem: I'm pressing a hotkey, but something else is happening.
 Solution: Make sure that another control isn't assigned to the combination
-you're pressing. For example, by default, "Exit Game" is assigned to ALT-F4,
-which overlaps the hotkey for the fourth item on the second row.
+you're pressing.
 
 Problem: I want my Hotbar to be vertical rather than horizontal.
 Solution: This is perfectly fine. Just resize the Hotbar window (drag from the
@@ -80,9 +77,9 @@ Solution: The Hotbar must be resized to be either 1x6, 2x6, 3x6, 6x1, 6x2, or
 when you try to activate a shortcut.
 
 Problem: I want to use something other than ALT and SHIFT.
-Solution: Reassign the "Save Video (Mov)" and "Save Video (Quicktime)" controls
-to the keys you want to use. Be sure to check that no other controls are
-assigned to combinations of your chosen keys and the targeting keys.
+Solution: Reassign the "Exit game" and "Camp to login" controls to the keys
+you want to use. Be sure to check that no other controls are assigned to
+combinations of your chosen keys and the targeting keys.
 
 Problem: I'm trying to use two items, one after the other, but the second one
 is targeting a team member instead.
@@ -99,6 +96,10 @@ did not intend to press. Alternatively, do not put items on the third row.
 
 HISTORY
 -------
+1.0.5
+* Change hotkey overrides from the movie saving keys (which are no longer
+  available) to the game exiting keys. Use the menu (F10) to exit the game.
+
 1.0.4
 * Built against the 1.11 source.
 
