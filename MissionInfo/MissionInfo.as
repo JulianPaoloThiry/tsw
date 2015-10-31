@@ -6,8 +6,6 @@ import mx.utils.Delegate;
 
 var m_MaxInitDelay:Number;
 var m_InitDelayInterval:Number = 250; //ms
-var m_ShowAllMissions:Function;
-var m_ShowMission:Function;
 var m_TDB_Tier:String;
 var m_TDB_PlayAudio:String;
 var m_TDB_PlayVideo:String;
@@ -22,6 +20,13 @@ function onLoad():Void
 
 function onUnload()
 {
+	var window = _root.missiontracker;
+	if (window["ShowAllMissionsOrig"] != undefined) {
+		window.ShowAllMissions = window["ShowAllMissionsOrig"];
+		delete window["ShowAllMissionsOrig"];
+		window.ShowMission = window["ShowMissionOrig"];
+		delete window["ShowMissionOrig"];
+	}
 }
 
 function InitWait():Void
@@ -54,14 +59,15 @@ function Init():Void
 	m_TDB_ShowImage = LDBFormat.LDBGetText( "MiscGUI", "ShowImage");
 	m_TDB_ToggleJournal = LDBFormat.LDBGetText( 10027, 268031047);
     m_IsMissionJournalActive = DistributedValue.Create( "mission_journal_window" );
-	if (_root.missiontracker.ShowAllMissions != this.ShowAllMissions) {
-		m_ShowAllMissions = _root.missiontracker.ShowAllMissions;
-		m_ShowMission = _root.missiontracker.ShowMission;
-		_root.missiontracker.ShowAllMissions = this.ShowAllMissions;
-		_root.missiontracker.ShowMission = this.ShowMission;
+	var window = _root.missiontracker;
+	if (window["ShowAllMissionsOrig"] == undefined) {
+		window["ShowAllMissionsOrig"] = window.ShowAllMissions;
+		window["ShowMissionOrig"] = window.ShowMission;
+		window.ShowAllMissions = Delegate.create(window, this.ShowAllMissions);
+		window.ShowMission = Delegate.create(window, this.ShowMission);
 	}
-	if (_root.missiontracker.m_MissionTrackerItem != undefined)
-		ShowMission(m_MissionTrackerItem.GetMissionId());
+	if (window.m_MissionTrackerItem != undefined)
+		window.ShowMission(window.m_MissionTrackerItem.GetMissionId());
 }
 
 function AddTooltip(tracker)
@@ -99,7 +105,7 @@ function AddTooltip(tracker)
 
 function ShowAllMissions()
 {
-	m_ShowAllMissions();
+	this["ShowAllMissionsOrig"]();
     for ( var i = 0; i < _root.missiontracker.m_MissionTrackerItemArray.length; ++i )
 	{
 		var tracker = _root.missiontracker.m_MissionTrackerItemArray[i];
@@ -111,7 +117,7 @@ function ShowAllMissions()
 
 function ShowMission(tierId:Number, goalId:Number, isActive:Boolean) :Boolean
 {
-	var result:Boolean = m_ShowMission(tierId, goalId, isActive);
+	var result:Boolean = this["ShowMissionOrig"](tierId, goalId, isActive);
 	var tracker = _root.missiontracker.m_MissionTrackerItem;
 	if (tracker != undefined) {
 		tracker.onRelease = Delegate.create( tracker, MediaButtonHandler);

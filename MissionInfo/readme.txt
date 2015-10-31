@@ -1,11 +1,11 @@
 Addon Name:      Mission Info
 Author:          Julian Paolo Thiry (Aedani)
-Version:         2.0.1
+Version:         2.0.2
 Official Site:   http://games.jupath.me/tsw/mission-info
 Distributors:    http://www.secretui.com/downloads/fileinfo.php?id=79
                  http://www.curse.com/tsw-mods/tsw/missioninfo
 Official Forum:  http://forums.thesecretworld.com/showthread.php?t=62045
-Source Code:     git://git.curseforge.net/tsw/missioninfo/mainline.git
+Source Code:     https://github.com/JulianPaoloThiry/tsw/tree/master/MissionInfo
 
 
 DESCRIPTION
@@ -20,14 +20,6 @@ bar (the part that auto-hides).
 
 INSTALLATION
 ------------
-NOTE: Be sure to uninstall version 1 using the instructions found in that
-      version's readme.txt before installing version 2.0 or later.
-NOTE: If you are installing version 2.0.1 on top of an existing installation,
-	  you will need to delete the following three files:
-	  • \Data\Gui\Customized\Flash\MissionTracker\LoginPrefs.bxml
-	  • \Data\Gui\Customized\Flash\MissionTracker\LoginPrefs.xml
-	  • \Data\Gui\Customized\Flash\MissionTracker\Modules.bxml
-
 Unpack the archive to <your TSW folder>\Data\Gui\Customized\
 You should end up with the following files at a minimum:
 • \Data\Gui\Customized\Flash\MissionTracker\MissionTracker.swf
@@ -42,6 +34,9 @@ Delete the MissionTracker folder mentioned above.
 
 HISTORY
 -------
+2.0.2
+* Fixed failure to initialize properly when switching characters.
+
 2.0.1
 * Fixed issue with mission bar showing no missions after accepting or completing
   missions.
